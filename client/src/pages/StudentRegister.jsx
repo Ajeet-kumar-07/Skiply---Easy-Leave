@@ -28,7 +28,7 @@ const StudentRegister = () => {
     setUserExists(false);
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/register', {
+      const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, role: 'student' })
@@ -49,7 +49,7 @@ const StudentRegister = () => {
       setSuccess('Registration successful! Redirecting...');
 
       // Optional: Auto-login
-      const loginRes = await fetch('http://localhost:5000/api/auth/login', {
+      const loginRes = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, password: formData.password })

@@ -11,7 +11,7 @@ const Home = () => {
     // Fetch notices
     const fetchNotices = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/notices');
+        const res = await fetch('/api/notices');
         const data = await res.json();
         setNotices(data);
       } catch {
@@ -22,7 +22,7 @@ const Home = () => {
     // Fetch testimonials
     const fetchTestimonials = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/testimonials');
+        const res = await fetch('/api/testimonials');
         const data = await res.json();
         setTestimonials(data);
       } catch {

@@ -17,7 +17,7 @@ const StudentProfile = () => {
           return;
         }
 
-        const res = await fetch('http://localhost:5000/api/auth/me', {
+        const res = await fetch('/api/auth/me', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -55,7 +55,7 @@ const StudentProfile = () => {
   const handleSave = async () => {
     try {
       const token = localStorage.getItem('studentToken');
-      const res = await fetch('http://localhost:5000/api/auth/update', {
+      const res = await fetch('/api/auth/update', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

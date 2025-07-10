@@ -10,7 +10,7 @@ const StudentList = () => {
   const fetchStudents = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const res = await fetch('http://localhost:5000/api/admin/students', {
+      const res = await fetch('/api/admin/students', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -29,7 +29,7 @@ const StudentList = () => {
   const toggleFeeStatus = async (id, currentStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const res = await fetch(`http://localhost:5000/api/admin/fee/${id}`, {
+      const res = await fetch(`/api/admin/fee/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

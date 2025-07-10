@@ -16,7 +16,7 @@ const ApplyLeave = () => {
 
     try {
       const token = localStorage.getItem('studentToken');
-      const res = await fetch('http://localhost:5000/api/leave/apply', {
+      const res = await fetch('/api/leave/apply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

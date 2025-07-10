@@ -6,7 +6,7 @@ const LeaveRequests = () => {
   const fetchRequests = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const res = await fetch('http://localhost:5000/api/leave/all', {
+      const res = await fetch('/api/leave/all', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -30,7 +30,7 @@ const LeaveRequests = () => {
   const updateStatus = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const res = await fetch(`http://localhost:5000/api/leave/approve/${id}`, {
+      const res = await fetch(`/api/leave/approve/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

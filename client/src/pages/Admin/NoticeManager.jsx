@@ -9,7 +9,7 @@ const NoticeManager = () => {
 
   const fetchNotices = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/notices');
+      const res = await fetch('/api/notices');
       const data = await res.json();
       setNotices(data);
     } catch (err) {
@@ -25,7 +25,7 @@ const NoticeManager = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:5000/api/notices/admin', {
+      const res = await fetch('/api/notices/admin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const NoticeManager = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/notices/admin/${id}`, {
+      const res = await fetch(`/api/notices/admin/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`

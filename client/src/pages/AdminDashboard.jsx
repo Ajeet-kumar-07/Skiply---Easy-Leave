@@ -15,7 +15,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchLeaveStats = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/leave/all', {
+        const res = await fetch('/api/leave/all', {
           headers: {
             Authorization: `Bearer ${token}`
           }

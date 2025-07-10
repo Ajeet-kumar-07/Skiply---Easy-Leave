@@ -8,7 +8,7 @@ const TestimonialManager = () => {
   const token = localStorage.getItem('adminToken');
 
   const fetchTestimonials = async () => {
-    const res = await fetch('http://localhost:5000/api/testimonials');
+    const res = await fetch('/api/testimonials');
     const data = await res.json();
     setTestimonials(data);
   };
