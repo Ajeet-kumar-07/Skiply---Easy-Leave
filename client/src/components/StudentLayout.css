@@ -1,0 +1,96 @@
+.student-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.student-sidebar {
+  width: 200px;
+  background: #eef2ff;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.student-avatar {
+  font-size: 32px;
+  background: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.student-avatar:active {
+  box-shadow: 0 0 0 8px #d1d5ff60;
+}
+
+.quote-slide {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #ffffffee;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: fadeSlide 0.3s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.greeting {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.student-sidebar nav {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.student-sidebar nav a {
+  text-decoration: none;
+  color: #3e4e88;
+  font-weight: bold;
+}
+
+.student-main {
+  flex: 1;
+  padding: 40px;
+  background: #f9faff;
+}
+
+/* 🎨 Optional Dark Mode */
+.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+.dark-mode .student-sidebar {
+  background: #1e1e2f;
+}
+
+.dark-mode .student-main {
+  background: #1a1a2b;
+}

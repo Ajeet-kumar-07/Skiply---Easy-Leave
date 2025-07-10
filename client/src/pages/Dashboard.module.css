@@ -1,0 +1,32 @@
+.wrapper {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+.title {
+  font-size: 24px;
+  color: #5C6BC0;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.button {
+  padding: 12px;
+  background-color: #5C6BC0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}

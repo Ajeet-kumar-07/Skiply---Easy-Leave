@@ -1,0 +1,64 @@
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.heading {
+  color: #5C6BC0;
+  text-align: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  background-color: #f4f4f4;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.statusPaid {
+  color: green;
+  font-weight: bold;
+}
+
+.statusUnpaid {
+  color: red;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
