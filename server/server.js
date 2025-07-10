@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-
+const path = require('path');
 // Load env variables
 dotenv.config();
 
@@ -29,9 +29,20 @@ app.use('/api/notices', noticeRoutes);
 app.use('/api/testimonials', testimonialRoutes);
 app.use('/api/admin', adminRoutes);
 
+//production
+// Serve frontend static files (only in production)
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+}
+
+
 // Health check
 app.get('/', (req, res) => {
-  res.send('✅ EduLeave API is running');
+  res.send('✅ Skiply  is running');
 });
 
 // Connect to MongoDB and start server
