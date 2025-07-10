@@ -23,11 +23,21 @@ app.use(cors());
 app.use(express.json()); // Parse JSON bodies
 
 // Routes
+console.log("🔁 Loading authRoutes");
 app.use('/api/auth', authRoutes);
+
+console.log("🔁 Loading leaveRoutes");
 app.use('/api/leave', leaveRoutes);
+
+console.log("🔁 Loading noticeRoutes");
 app.use('/api/notices', noticeRoutes);
+
+console.log("🔁 Loading testimonialRoutes");
 app.use('/api/testimonials', testimonialRoutes);
+
+console.log("🔁 Loading adminRoutes");
 app.use('/api/admin', adminRoutes);
+
 
 //production
 // Serve frontend static files (only in production)
