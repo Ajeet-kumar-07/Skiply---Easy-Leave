@@ -2,7 +2,6 @@ client/node_modules/
 server/node_modules/
 
 # Client-side build artifacts
-client/build/
 client/dist/
 
 # Server-side build artifacts
