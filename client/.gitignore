@@ -6,8 +6,6 @@ server/node_modules/
 # Build output
 dist/
 build/
-client/build/
-
 # Logs
 logs/
 *.log
