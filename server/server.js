@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
+const helmet = require('helmet');
 // Load env variables
 dotenv.config();
 
@@ -17,6 +18,20 @@ const adminRoutes = require('./routes/adminRoutes');
 
 // Init app
 const app = express();
+
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "script-src": ["'self'", "https:", "blob:"],
+        "default-src": ["'self'", "https:", "blob:"],
+        "img-src": ["'self'", "data:", "blob:"],
+        "connect-src": ["'self'", "https:", "blob:"],
+      }
+    }
+  })
+);
 
 // Middleware
 app.use(cors());
