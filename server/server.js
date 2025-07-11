@@ -19,6 +19,20 @@ const adminRoutes = require('./routes/adminRoutes');
 // Init app
 const app = express();
 
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "script-src": ["'self'", "https:", "blob:"],
+        "default-src": ["'self'", "https:", "blob:"],
+        "img-src": ["'self'", "data:", "blob:"],
+        "connect-src": ["'self'", "https:", "blob:"],
+      }
+    }
+  })
+);
+
 // Middleware
 app.use(cors());
 app.use(express.json()); // Parse JSON bodies
