@@ -30,7 +30,7 @@ const StudentDashboard = () => {
 
       <div className={styles.grid}>
         <motion.a
-          href="/student/apply"
+          href="api/leave/apply"
           className={styles.card}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
@@ -38,7 +38,7 @@ const StudentDashboard = () => {
           ✍️ Apply Leave
         </motion.a>
         <motion.a
-          href="/student/status"
+          href="api/leave/status"
           className={styles.card}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
