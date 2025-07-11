@@ -7,7 +7,7 @@ const LeaveHistory = () => {
   const fetchHistory = async () => {
     try {
       const token = localStorage.getItem('studentToken');
-      const res = await fetch('http://localhost:5000/api/leave/status', {
+      const res = await fetch('/api/leave/status', {
         headers: {
           Authorization: `Bearer ${token}`
         }
