@@ -65,10 +65,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-// Health check
-app.get('/', (req, res) => {
-  res.send('✅ Skiply  is running');
-});
+
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;

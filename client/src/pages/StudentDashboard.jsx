@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../assets/css/StudentDashboards.module.css';
+import { Link } from 'react-router-dom';
 
 const StudentDashboard = () => {
   const [user, setUser] = useState(null);
@@ -29,24 +30,9 @@ const StudentDashboard = () => {
       <p><strong>Year:</strong> {user.year}</p>
 
       <div className={styles.grid}>
-        <motion.a
-          href="api/leave/apply"
-          className={styles.card}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          ✍️ Apply Leave
-        </motion.a>
-        <motion.a
-          href="api/leave/status"
-          className={styles.card}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          📄 Leave Status
-        </motion.a>
+        <Link to="/student/apply" className={styles.card}>✍️ Apply Leave</Link>
+        <Link to="/student/status" className={styles.card}>📄 Leave Status</Link>
       </div>
-
       <motion.button
         onClick={() => {
           localStorage.removeItem('studentToken');
