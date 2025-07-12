@@ -30,8 +30,8 @@ const StudentDashboard = () => {
       <p><strong>Year:</strong> {user.year}</p>
 
       <div className={styles.grid}>
-        <Link to="/api/leave/apply" className={styles.card}>✍️ Apply Leave</Link>
-        <Link to="/api/leave/status" className={styles.card}>📄 Leave Status</Link>
+        <Link to="/student/apply" className={styles.card}>✍️ Apply Leave</Link>
+        <Link to="/student/status" className={styles.card}>📄 Leave Status</Link>
       </div>
       <motion.button
         onClick={() => {
