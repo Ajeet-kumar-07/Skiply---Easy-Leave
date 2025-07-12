@@ -28,24 +28,28 @@ const StudentDashboard = () => {
       <p><strong>Department:</strong> {user.department}</p>
       <p><strong>Year:</strong> {user.year}</p>
 
+      import { Link } from 'react-router-dom';
+
       <div className={styles.grid}>
-        <motion.a
-          href="api/leave/apply"
-          className={styles.card}
+        <motion.div
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
-          ✍️ Apply Leave
-        </motion.a>
-        <motion.a
-          href="api/leave/status"
-          className={styles.card}
+          <Link to="/student/apply" className={styles.card}>
+            ✍️ Apply Leave
+          </Link>
+        </motion.div>
+      
+        <motion.div
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
-          📄 Leave Status
-        </motion.a>
+          <Link to="/student/status" className={styles.card}>
+            📄 Leave Status
+          </Link>
+        </motion.div>
       </div>
+
 
       <motion.button
         onClick={() => {
