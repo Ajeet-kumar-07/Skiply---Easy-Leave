@@ -35,7 +35,7 @@ const StudentDashboard = () => {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
-          <Link to="/student/apply" className={styles.card}>
+          <Link to="/api/leave/apply" className={styles.card}>
             ✍️ Apply Leave
           </Link>
         </motion.div>
@@ -44,7 +44,7 @@ const StudentDashboard = () => {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
-          <Link to="/student/status" className={styles.card}>
+          <Link to="/api/leave/status" className={styles.card}>
             📄 Leave Status
           </Link>
         </motion.div>
