@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../assets/css/StudentDashboards.module.css';
+import { Link } from 'react-router-dom';
 
 const StudentDashboard = () => {
   const [user, setUser] = useState(null);
