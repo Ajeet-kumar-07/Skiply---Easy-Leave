@@ -36,7 +36,7 @@ const StudentDashboard = () => {
           whileTap={{ scale: 0.97 }}
         >
           <Link to="/api/leave/apply" className={styles.card}>
-            ✍️ Apply Leave
+            ✍️ Apply Leave.
           </Link>
         </motion.div>
       
